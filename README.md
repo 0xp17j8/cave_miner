@@ -6,17 +6,16 @@ This tools search for code cave in binaries (Elf, Mach-o, Pe), and inject code i
 Installation
 ============
 
-/!\ Only work in python2.x /!\
-
-.. code-block:: bash
+```bash
     pip install cave-miner
+```
 
 Usage
 =====
 
-.. image:: ./images/help.png
+<img src="./images/help.png" width="100%">
 
 Exemple
 =======
 
-.. image:: ./images/putty.png
+<img src="./images/putty.png" width="100%">

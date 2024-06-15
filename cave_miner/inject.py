@@ -1,17 +1,18 @@
-from utils import *
+from utils import color, parse_int
 
-def inject(payload_name, file_name, straddr):
-  print(color("{yellow}[*]{bold} Starting injection into binary...{endc}"))
-  print
-  addr = parse_int(straddr)
 
-  payload = open(payload_name, "rb").read()
-  vic = open(file_name, "rb").read()
+def inject(payload_name: str, file_name: str, straddr: str) -> None:
+    print(color("{yellow}[*]{bold} Starting injection into binary...{endc}"))
+    print()
+    addr = parse_int(straddr)
 
-  res = vic[:addr] + payload + vic[addr + len(payload):]
+    payload = open(payload_name, "rb").read()
+    vic = open(file_name, "rb").read()
 
-  f = open("{}.mod".format(file_name), "w")
-  f.write(res)
-  f.close()
+    res = vic[:addr] + payload + vic[addr + len(payload) :]
 
-  print(color("{yellow}[*]{bold} Injection finished.{endc}"))
+    f = open("{}.mod".format(file_name), "wb")
+    f.write(res)
+    f.close()
+
+    print(color("{yellow}[*]{bold} Injection finished.{endc}"))
