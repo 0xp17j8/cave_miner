@@ -1,21 +1,18 @@
-CAVE MINER
-##########
+# CAVE MINER
 
 This tools search for code cave in binaries (Elf, Mach-o, Pe), and inject code in them.
 
-Installation
-============
+## Installation
+
 
 ```bash
     pip install cave-miner
 ```
 
-Usage
-=====
+## Usage
 
 <img src="./images/help.png" width="100%">
 
-Exemple
-=======
+## Exemple
 
 <img src="./images/putty.png" width="100%">
